@@ -1,0 +1,27 @@
+<!--  	chapter 2  - hello-controller - page 19 		-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+		<body ng-controller="MainCtrl as ctrl">
+
+			{{ctrl.helloMsg}} AngularJS
+			<br/>
+			{{ctrl.goodbyeMsg}} AngularJS
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+
+				angular.module('notesApp', [])
+					.controller('MainCtrl',[function(){
+						this.helloMsg = 'Hello ';
+						var goodbyeMsg = 'Goodbye ';
+					}]);
+
+			</script>
+
+
+		</body>
+
+	</head>
+</html>
