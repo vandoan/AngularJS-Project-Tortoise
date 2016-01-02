@@ -1,0 +1,60 @@
+<!--  	chapter 2 - ng-repeat across elements - page 33 	-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+
+		<body ng-controller="MainCtrl as ctrl">
+
+			<table>
+
+				<tr ng-repeat-start="note in ctrl.notes">
+					<td>{{note.label}}</td>
+				</tr>
+
+				<tr ng-repeat-end>
+					<td>Done: {{note.done}}</td>
+				</tr>
+
+			</table>
+
+
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+// ng-repeat-start and ng-repeat-end 
+
+				angular.module('notesApp', [])
+					.controller('MainCtrl',[function(){
+						
+						var self = this;
+						self.notes = [
+
+							{
+								id: 1, 	
+								label: 'First Note', 	
+								done: true, 
+								someRandom: 31431,
+							},
+							{
+								id: 2, 	
+								label: 'Second Note', 
+								done: false, 
+								someRandom: 31452,
+							},
+							{
+								id: 3, 	
+								label: 'Third Note', 
+								done: true, 
+								someRandom: 31435,
+							},
+
+						];
+
+					}]);
+			</script>
+
+		</body>
+
+	</head>
+</html>
