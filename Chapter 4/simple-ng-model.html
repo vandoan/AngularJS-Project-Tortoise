@@ -1,0 +1,27 @@
+<!--  	chapter 4 - simple ng model- page 49 	-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+
+		<body ng-controller="MainCtrl as ctrl">
+ 
+ 	 		<input type='text' ng-model="ctrl.username" />
+ 	 			You typed {{ ctrl.username }}
+
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+
+// ng-model capture what's placed in the field
+// The below function initiate the default value for ctr.username
+
+				angular.module('notesApp', [])
+					.controller('MainCtrl',[function(){
+						this.username = 'Nothing';
+					}]);
+			</script>
+
+		</body>
+	</head>
+</html>

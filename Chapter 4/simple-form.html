@@ -1,0 +1,43 @@
+<!--  	chapter 4 - simple form - page 1  	-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+
+		<body ng-controller="MainCtrl as ctrl">
+ 
+ 	 		<form ng-submit='ctrl.submit()'>
+ 	 			<input type='text' ng-model='ctrl.user.username'>
+ 	 			<input type='password' ng-model='ctrl.user.password'>
+ 	 			<input type='submit' value='Submit'>
+ 	 		</form>
+
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+
+// With this form, you can now submit with enter, compared to ng-click
+// In this version, we have user.username, which creates an object 
+
+				angular.module('notesApp', [])
+					.controller('MainCtrl',[function(){
+ 
+						var self = this;
+
+						this.username = 'username';
+
+						self.change = function() { 
+							self.username = 'changed';
+							self.password = 'password';
+						};
+						self.submit = function() {
+							console.log('User clicked submit with ', 
+								self.user );
+						};
+
+ 					}]);
+			</script>
+
+		</body>
+	</head>
+</html>

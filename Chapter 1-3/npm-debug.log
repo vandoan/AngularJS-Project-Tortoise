@@ -1,0 +1,162 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'karma-jasmine',
+1 verbose cli   'karma-chrome-launcher' ]
+2 info using npm@2.14.12
+3 info using node@v4.2.4
+4 verbose install initial load of /Users/doanvan/Desktop/Project Tortoise/package.json
+5 verbose installManyTop reading scoped package data from /Users/doanvan/Desktop/Project Tortoise/node_modules/karma/package.json
+6 verbose readDependencies loading dependencies from /Users/doanvan/Desktop/Project Tortoise/package.json
+7 silly cache add args [ 'karma-jasmine', null ]
+8 verbose cache add spec karma-jasmine
+9 silly cache add args [ 'karma-chrome-launcher', null ]
+10 verbose cache add spec karma-chrome-launcher
+11 silly cache add parsed spec Result {
+11 silly cache add   raw: 'karma-jasmine',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'karma-jasmine',
+11 silly cache add   rawSpec: '',
+11 silly cache add   spec: 'latest',
+11 silly cache add   type: 'tag' }
+12 silly addNamed karma-jasmine@latest
+13 verbose addNamed "latest" is being treated as a dist-tag for karma-jasmine
+14 info addNameTag [ 'karma-jasmine', 'latest' ]
+15 silly mapToRegistry name karma-jasmine
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+19 verbose addNameTag registry:https://registry.npmjs.org/karma-jasmine not in flight; fetching
+20 silly cache add parsed spec Result {
+20 silly cache add   raw: 'karma-chrome-launcher',
+20 silly cache add   scope: null,
+20 silly cache add   name: 'karma-chrome-launcher',
+20 silly cache add   rawSpec: '',
+20 silly cache add   spec: 'latest',
+20 silly cache add   type: 'tag' }
+21 silly addNamed karma-chrome-launcher@latest
+22 verbose addNamed "latest" is being treated as a dist-tag for karma-chrome-launcher
+23 info addNameTag [ 'karma-chrome-launcher', 'latest' ]
+24 silly mapToRegistry name karma-chrome-launcher
+25 silly mapToRegistry using default registry
+26 silly mapToRegistry registry https://registry.npmjs.org/
+27 silly mapToRegistry uri https://registry.npmjs.org/karma-chrome-launcher
+28 verbose addNameTag registry:https://registry.npmjs.org/karma-chrome-launcher not in flight; fetching
+29 verbose request uri https://registry.npmjs.org/karma-jasmine
+30 verbose request no auth needed
+31 info attempt registry request try #1 at 7:42:08 AM
+32 verbose request id b45bb7da5eef3847
+33 verbose etag "6HSKDYIGH20E1BYWMNZ0NOHGA"
+34 http request GET https://registry.npmjs.org/karma-jasmine
+35 verbose request uri https://registry.npmjs.org/karma-chrome-launcher
+36 verbose request no auth needed
+37 info attempt registry request try #1 at 7:42:08 AM
+38 verbose etag "A8HDOB124C294NNAT18VDVYHA"
+39 http request GET https://registry.npmjs.org/karma-chrome-launcher
+40 http 304 https://registry.npmjs.org/karma-jasmine
+41 verbose headers { date: 'Sat, 02 Jan 2016 12:42:08 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   etag: '"6HSKDYIGH20E1BYWMNZ0NOHGA"',
+41 verbose headers   age: '9',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-jfk1027-JFK',
+41 verbose headers   'x-cache': 'HIT',
+41 verbose headers   'x-cache-hits': '1',
+41 verbose headers   'x-timer': 'S1451738528.301487,VS0,VE0',
+41 verbose headers   vary: 'Accept' }
+42 silly get cb [ 304,
+42 silly get   { date: 'Sat, 02 Jan 2016 12:42:08 GMT',
+42 silly get     via: '1.1 varnish',
+42 silly get     'cache-control': 'max-age=300',
+42 silly get     etag: '"6HSKDYIGH20E1BYWMNZ0NOHGA"',
+42 silly get     age: '9',
+42 silly get     connection: 'keep-alive',
+42 silly get     'x-served-by': 'cache-jfk1027-JFK',
+42 silly get     'x-cache': 'HIT',
+42 silly get     'x-cache-hits': '1',
+42 silly get     'x-timer': 'S1451738528.301487,VS0,VE0',
+42 silly get     vary: 'Accept' } ]
+43 verbose etag https://registry.npmjs.org/karma-jasmine from cache
+44 verbose get saving karma-jasmine to /Users/doanvan/.npm/registry.npmjs.org/karma-jasmine/.cache.json
+45 http 304 https://registry.npmjs.org/karma-chrome-launcher
+46 verbose headers { date: 'Sat, 02 Jan 2016 12:42:08 GMT',
+46 verbose headers   via: '1.1 varnish',
+46 verbose headers   'cache-control': 'max-age=300',
+46 verbose headers   etag: '"A8HDOB124C294NNAT18VDVYHA"',
+46 verbose headers   age: '9',
+46 verbose headers   connection: 'keep-alive',
+46 verbose headers   'x-served-by': 'cache-jfk1036-JFK',
+46 verbose headers   'x-cache': 'HIT',
+46 verbose headers   'x-cache-hits': '1',
+46 verbose headers   'x-timer': 'S1451738528.304515,VS0,VE0',
+46 verbose headers   vary: 'Accept' }
+47 silly get cb [ 304,
+47 silly get   { date: 'Sat, 02 Jan 2016 12:42:08 GMT',
+47 silly get     via: '1.1 varnish',
+47 silly get     'cache-control': 'max-age=300',
+47 silly get     etag: '"A8HDOB124C294NNAT18VDVYHA"',
+47 silly get     age: '9',
+47 silly get     connection: 'keep-alive',
+47 silly get     'x-served-by': 'cache-jfk1036-JFK',
+47 silly get     'x-cache': 'HIT',
+47 silly get     'x-cache-hits': '1',
+47 silly get     'x-timer': 'S1451738528.304515,VS0,VE0',
+47 silly get     vary: 'Accept' } ]
+48 verbose etag https://registry.npmjs.org/karma-chrome-launcher from cache
+49 verbose get saving karma-chrome-launcher to /Users/doanvan/.npm/registry.npmjs.org/karma-chrome-launcher/.cache.json
+50 silly addNameTag next cb for karma-chrome-launcher with tag latest
+51 silly addNamed karma-chrome-launcher@0.2.2
+52 verbose addNamed "0.2.2" is a plain semver version for karma-chrome-launcher
+53 silly addNameTag next cb for karma-jasmine with tag latest
+54 silly addNamed karma-jasmine@0.3.6
+55 verbose addNamed "0.3.6" is a plain semver version for karma-jasmine
+56 silly mapToRegistry name karma-chrome-launcher
+57 silly mapToRegistry using default registry
+58 silly mapToRegistry registry https://registry.npmjs.org/
+59 silly mapToRegistry uri https://registry.npmjs.org/karma-chrome-launcher
+60 verbose addRemoteTarball https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.2.2.tgz not in flight; adding
+61 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.2.2.tgz',
+61 verbose addRemoteTarball   '38c3e49af5a43ea1cd691b110a03ba6dd66b4c2e' ]
+62 silly mapToRegistry name karma-jasmine
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry uri https://registry.npmjs.org/karma-jasmine
+66 verbose addRemoteTarball https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz not in flight; adding
+67 verbose addRemoteTarball [ 'https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz',
+67 verbose addRemoteTarball   'ddcc34413ac0405aa34ce29ff472e957420b857a' ]
+68 info retry fetch attempt 1 at 7:42:08 AM
+69 info attempt registry request try #1 at 7:42:08 AM
+70 http fetch GET https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.2.2.tgz
+71 info retry fetch attempt 1 at 7:42:08 AM
+72 info attempt registry request try #1 at 7:42:08 AM
+73 http fetch GET https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz
+74 http fetch 200 https://registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.2.2.tgz
+75 http fetch 200 https://registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz
+76 silly fetchAndShaCheck shasum 38c3e49af5a43ea1cd691b110a03ba6dd66b4c2e
+77 silly fetchAndShaCheck shasum ddcc34413ac0405aa34ce29ff472e957420b857a
+78 verbose addTmpTarball /var/folders/r4/sc8vx1q9701275k7qty8fxf80000gn/T/npm-87814-ec85a3de/registry.npmjs.org/karma-chrome-launcher/-/karma-chrome-launcher-0.2.2.tgz not in flight; adding
+79 verbose addTmpTarball already have metadata; skipping unpack for karma-chrome-launcher@0.2.2
+80 verbose addTmpTarball /var/folders/r4/sc8vx1q9701275k7qty8fxf80000gn/T/npm-87814-ec85a3de/registry.npmjs.org/karma-jasmine/-/karma-jasmine-0.3.6.tgz not in flight; adding
+81 verbose addTmpTarball already have metadata; skipping unpack for karma-jasmine@0.3.6
+82 verbose stack Error: EACCES: permission denied, mkdir '/Users/doanvan/.npm/karma-chrome-launcher/0.2.2'
+82 verbose stack     at Error (native)
+83 verbose cwd /Users/doanvan/Desktop/Project Tortoise
+84 error Darwin 13.4.0
+85 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "karma-jasmine" "karma-chrome-launcher"
+86 error node v4.2.4
+87 error npm  v2.14.12
+88 error path /Users/doanvan/.npm/karma-chrome-launcher/0.2.2
+89 error code EACCES
+90 error errno -13
+91 error syscall mkdir
+92 error Error: EACCES: permission denied, mkdir '/Users/doanvan/.npm/karma-chrome-launcher/0.2.2'
+92 error     at Error (native)
+92 error  { [Error: EACCES: permission denied, mkdir '/Users/doanvan/.npm/karma-chrome-launcher/0.2.2']
+92 error   errno: -13,
+92 error   code: 'EACCES',
+92 error   syscall: 'mkdir',
+92 error   path: '/Users/doanvan/.npm/karma-chrome-launcher/0.2.2' }
+93 error Please try running this command again as root/Administrator.
+94 verbose exit [ -13, true ]

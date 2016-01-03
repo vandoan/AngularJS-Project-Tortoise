@@ -1,0 +1,42 @@
+<!--  	chapter 4 - simple ng model 2 - page 50 	-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+
+		<body ng-controller="MainCtrl as ctrl">
+ 
+ 	 		<input type='text' ng-model="ctrl.username" />
+ 	 		<input type='password' ng-model="ctrl.password" />
+ 	 		<button ng-click="ctrl.change()"> Change Values </button>
+ 	 		<button ng-click="ctrl.submit()"> Submit </button> 
+
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+
+// The change button simulates the server sending some data that needs to be updated in the UI
+// The second button simulates submitting the form to the server
+
+				angular.module('notesApp', [])
+					.controller('MainCtrl',[function(){
+ 
+						var self = this;
+
+						this.username = 'username';
+
+						self.change = function() { 
+							self.username = 'changed';
+							self.password = 'password';
+						};
+						self.submit = function() {
+							console.log('User clicked submit with username ' + 
+								self.username + ' and password ' + self.password);
+						};
+
+ 					}]);
+			</script>
+
+		</body>
+	</head>
+</html>
