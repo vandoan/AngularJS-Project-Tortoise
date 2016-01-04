@@ -1,0 +1,66 @@
+<!--  	chapter 4 - form styling - page 59  	-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+
+		<style>
+			.username.ng-valid { background-color: green; }
+			.username.ng-dirty.ng-invalid-required { background-color: red; }
+			.username.ng-dirty.ng-invalid-minlength { background-color: lightpink; }
+		</style>
+
+		<body ng-controller="MainCtrl as ctrl">
+
+ 	 		<form ng-submit='ctrl.submit()' name='myForm'>
+
+ 	 			<input type='text' 
+ 	 				class='username'
+ 	 				ng-model='ctrl.user.username'
+ 	 				name='uname'
+ 	 				required
+ 	 				ng-minlength="4"
+ 	 			>
+ 	 			<span ng-show="myForm.uname.$error.required">
+ 	 				This is a required field
+ 	 			</span>
+ 	 			
+ 	 			<input type='password'
+ 	 				name='pwd'
+ 	 				ng-model='ctrl.user.password'
+ 	 				required
+ 	 			>
+ 	 			<span ng-show="myForm.pwd.$error.required">
+ 	 				This is a required field
+ 	 			</span>
+ 	 			<input type='submit' 
+ 	 				value='Submit'
+ 	 				ng-disabled="myForm.$invalid"
+ 	 			>
+
+ 	 		</form>
+
+
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+
+// With the username, only accept it if it's 4 or more character.
+// If the required fields aren't filled, then the submit button is disabled.
+
+				angular.module('notesApp', [])
+					.controller('MainCtrl',[function(){
+ 
+						var self = this;
+
+						self.submit = function(){
+							console.log('Form submit with ', self.user);
+						};
+
+ 					}]);
+
+			</script>
+
+		</body>
+	</head>
+</html>
