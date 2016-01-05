@@ -1,0 +1,86 @@
+<!--  	chapter 4 - checkbox example - page 63  	-->
+
+<html ng-app="notesApp">
+	<head> 
+		<title>Notes App</title> 
+
+		 
+		<body ng-controller="MainCtrl as ctrl">
+
+			<div ng-init="user = {gender: 'female'}">
+				<input 
+					type='radio'
+					name='gender'
+					ng-model='user.gender'
+					value='male'
+				>Male
+				<input 
+					type='radio'
+					name='gender'
+					ng-model='user.gender'
+					value='female'
+				>Female
+				<input 
+					type='radio'
+					name='gender'
+					ng-model='user.gender'
+					value='otherGender'
+				>{{otherGender}}
+			</div>
+
+			<div ng-init="location = 'India'">
+				<select ng-model='location'>
+					<option value='USA'>USA</option>
+					<option value='India'>India</option>
+					<option value='Other'>None of the above</option>
+				</select>
+			</div>
+			
+			<div>
+				<h2>What are your favorite sports?</h2>
+				<div ng-repeat='sport in ctrl.sports'>
+					<br>
+					<label ng-bind='sport.label'></label>
+					<div>
+						With Binding:
+						<input 
+							type="checkbox"
+							ng-model="sport.selected"
+							ng-true-value='YES'
+							ng-false-value='NO'
+						>
+					</div>
+					<div>
+						Using ng-checked:
+						<input 
+							type='checkbox'
+							ng-checked="sport.selected === 'YES'"
+						>
+					</div>
+					<div>
+						Current state: {{ sport.selected }}
+					</div>
+				</div>
+			</div>
+
+			<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+
+			<script type="text/javascript">
+// If sport.selected is true and ng-checked is stated, check the box
+
+				angular.module('notesApp',[])
+					.controller('MainCtrl',[function(){
+						var self = this;
+						self.sports = [
+							{ label: 'Basketball', 	selected: 'YES' },
+							{ label: 'Cricket', 	selected: 'NO' },
+							{ label: 'Soccer', 		selected: 'NO' },
+							{ label: 'Swimming', 	selected: 'YES'},
+						];
+					}]);
+
+			</script>
+
+		</body>
+	</head>
+</html>
